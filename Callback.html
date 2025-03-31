@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <script>
+        /*
+        function greet(name, callback) {
+            console.log("Halo, " + name);
+            callback();
+        }
+
+        function sayGoodbye() {
+            console.log("Sampai jumpa!");
+        }
+        greet("Alice", sayGoodbye);
+        */
+
+        function greet(name, callback) {
+            console.log("Halo, " + name);
+        }
+
+        function sayGoodbye() {
+            console.log("Sampai jumpa!");
+        }
+        setTimeout(sayGoodbye, 2000);
+        greet("Alice");
+    </script>
+</body>
+</html>

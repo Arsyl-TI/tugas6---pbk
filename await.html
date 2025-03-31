@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async/Await</title>
+</head>
+<body>
+    <script>
+        async function myAsyn() {
+            let p = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Hello world!"), 2000)
+            });
+
+            let result = await p;
+            alert(result)
+            
+        }
+        myAsyn();
+    </script>
+</body>
+</html>

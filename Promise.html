@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        /* 
+        let janji = "bernyanyi"
+
+        let p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (janji === "bernyanyi") {
+                    resolve("Penonton senang")
+                }  else {
+                    reject("Anda tidak bernyanyi")
+                }
+            }, 2000)
+        })
+
+        p.then((result) => {
+            alert(result)
+        }).catch((error) => {
+            alert(error)
+        })
+        */
+
+        new Promise(function(resolve, reject) {
+            setTimeout(() => resolve("Beli bakso"), 1000); 
+        })
+        .then(function(result) {
+            alert(result);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Makan bakso"), 1000);
+            });
+        })
+        .then(function(result) {
+        alert(result);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Membayar bakso"), 1000);
+            });
+        })
+        .then(function(result) {
+            alert(result);
+        });
+    </script>
+</body>
+</html>
